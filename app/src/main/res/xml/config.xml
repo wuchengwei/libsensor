@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="net.dolearning.dosensorApp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>尚学趣</name>
+    <description>尚学趣 支持连接传感器</description>
+    <author email="chengwei.wu@dolearning.net" href="https://dolearning.net">
+        Chengwei Wu
+    </author>
+    <content src="dopkg" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="schema" value="https" />
+    <preference name="hostname" value="dolearning.net" />
+
+    <feature name="BluetoothLePlugin">
+        <param name="android-package" value="com.randdusing.bluetoothle.BluetoothLePlugin" />
+        <param name="onload" value="true" />
+    </feature>
+
+    <feature name="SwrSensor">
+        <param name="android-package" value="net.dolearning.libsensor.DoCordovaPluginSwrSensor" />
+        <param name="onload" value="true" />
+    </feature>
+
+    <feature name="QRScanner">
+        <param name="android-package" value="bitpay.cordova.qrscanner.QRScanner" />
+    </feature>
+
+    <feature name="hc05Communicator">
+        <param name="android-package" value="net.dolearning.libsensor.DoCordovaPluginHC05" />
+        <param name="onload" value="true" />
+    </feature>
+</widget>
