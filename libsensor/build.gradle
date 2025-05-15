@@ -73,7 +73,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.wuchengwei'
             artifactId = 'libsensor'
-            version = 'v1.0.5'
+            version = 'v1.0.6'
 
             afterEvaluate {
                 from components.findByName('release')
