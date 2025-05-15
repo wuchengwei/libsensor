@@ -1,2 +1,4 @@
 jdk:
   - openjdk17
+before_install:
+  - sdkmanager "cmake;3.31.1"
