@@ -1,5 +1,9 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-alias(libs.plugins.androidApplication) apply false
+    // "apply false" means to resolve the plugin, but don't apply the plugin.
+    // Resolving means resolve the plugin itself and any associated dependencies for that plugin.
+    // This makes the plugin code, classpath, and its dependencies available for use in the build script.
+    // This is useful to reuse task classes from a plugin or to apply it to some other target than the current script.
+    alias(libs.plugins.androidApplication) apply false
     alias(libs.plugins.androidLibrary) apply false
 }

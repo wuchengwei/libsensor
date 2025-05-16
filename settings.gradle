@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "dosensorApp"
 include ':app'
 include ':libsensor'
+project(':libsensor').name = 'libsensor'

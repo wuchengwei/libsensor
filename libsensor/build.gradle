@@ -31,7 +31,9 @@ android {
 
     buildTypes {
         release {
+            // 配置是否进行代码混淆
             minifyEnabled false
+            // 配置代码混淆规则
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -50,6 +52,12 @@ android {
             path file('CMakeLists.txt')
 
             version "3.31.1"
+        }
+    }
+
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
         }
     }
 }
@@ -71,13 +79,22 @@ dependencies {
 publishing {
     publications {
         release(MavenPublication) {
-            groupId = 'com.github.wuchengwei'
+            groupId = 'net.dolearning.learnware'
             artifactId = 'libsensor'
             version = 'v1.0.7'
 
             afterEvaluate {
                 from components.findByName('release')
             }
+        }
+    }
+
+    // This creates a task called publishReleasePublicationToLibsensorRepository. This task will
+    // generate a repository located inside the 'build/lib' folder of the project.
+    repositories {
+        maven {
+            name = 'libsensor'
+            url = layout.buildDirectory.dir('lib')
         }
     }
 }
