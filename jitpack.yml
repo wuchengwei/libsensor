@@ -2,5 +2,3 @@ before_install:
   - sdkmanager "cmake;3.31.1"
   - sdk install java 17.0.12-oracle
   - sdk use java 17.0.12-oracle
-  - sudo apt update
-  - sudo apt install libc6
