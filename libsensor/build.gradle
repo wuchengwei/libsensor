@@ -65,7 +65,7 @@ android {
 dependencies {
     // any dependencies marked 'api' will also be available to app module
     api "org.apache.cordova:framework:13.0.0"
-    api "com.journeyapps:zxing-android-embedded:3.3.0"
+    api "com.journeyapps:zxing-android-embedded:4.3.0"
 
     // dependencies marked 'implementation' will only be available to the current module
     implementation "androidx.webkit:webkit:1.12.1"
@@ -81,7 +81,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'net.dolearning.learnware'
             artifactId = 'libsensor'
-            version = 'v1.0.7'
+            version = 'v1.0.9'
 
             afterEvaluate {
                 from components.findByName('release')

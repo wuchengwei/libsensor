@@ -36,7 +36,7 @@ public class DoCordovaActivity extends CordovaActivity {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_dolearning_sensor);
 
         super.init();
 
